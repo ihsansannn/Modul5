@@ -69,17 +69,18 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+        //mendapatkan id dari item yang
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        //apabila item yang dipilih adalah setting
+        if (id==R.id.action_settings){
+            //membuat intent baru dari list to do ke pengaturan
+            Intent intent = new Intent(MainActivity.this, SettingActivity.class);
+            //memulai intent
+            startActivity(intent);
+            //menutup aktivitas setelah intent dijalankan
+            finish();
         }
-
-        return super.onOptionsItemSelected(item);
+        return true;
     }
 
     private swipe.SwipetoDismissCallBack getCallback(final todoAdapter adapter) {

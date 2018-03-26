@@ -19,6 +19,9 @@
         <activity
             android:name=".AddNewRecord"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".SettingActivity"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
